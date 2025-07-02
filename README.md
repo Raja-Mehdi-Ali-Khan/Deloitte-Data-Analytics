@@ -33,71 +33,93 @@ Each factory has 9 machine types, reporting status every 10 minutes. All telemet
 
        IF [status] = 'Unhealthy' THEN 10 ELSE 0
 
-   (This assigns 10 minutes of downtime per 'Unhealthy' report.)
+(Assigning 10 minutes of potential downtime per 'Unhealthy' record.)
 
-3. Created two bar charts:
-   - **Down Time per Factory**
-   - **Down Time per Device Type**
+### 📊 Developed the Following Visualizations:
 
-4. Built a dashboard combining the two charts.
-5. Enabled filter action on the first chart to dynamically update the second based on selected factory.
-6. Identified the factory with the maximum cumulative downtime and the machines most frequently reporting failure.
+- **Down Time per Factory** (bar chart)
+- **Down Time per Device Type** (bar chart)
 
-### Outcome:
-- The factory with the most downtime was identified.
-- Machine types contributing most to the downtime were revealed.
-- A screenshot of the dashboard was submitted as proof of completion.
+### 🧩 Built an Interactive Dashboard Combining Both Charts:
+
+- Enabled **filter action** on the first chart to dynamically update the second based on the selected factory.
+
+### 📈 Created Additional Insights:
+
+- **Unhealthy Events Over Time** (line chart)
+- **Heatmap of Device Type vs Factory**
+- **Failure Rate by Device Type**
+- **Factory Performance Summary Table**
 
 ---
 
-## Task 2: Forensic Technology – Gender Pay Equity Analysis in Excel
+### ✅ Outcome
 
-### Objective:
-To assist in classifying gender pay equity across roles and locations based on Deloitte's forensic audit algorithm.
+- Identified the factory with the **highest total downtime**.
+- Determined which **machine types** were most responsible for downtime in that factory.
+- Submitted a **screenshot of the Tableau dashboard** as required.
 
-### Context:
-Daikibo received internal complaints about gender inequality in salaries. The forensic team generated an equality score (from -100 to +100) for each job role at each factory:
-- 0 indicates perfect equality.
-- Negative or positive extremes indicate bias in either direction.
+---
 
-### Tools Used:
+## 🕵️‍♂️ Task 2: Forensic Technology – Gender Pay Equity Analysis in Excel
+
+### 🎯 Objective
+Assist Daikibo’s forensic team by classifying the level of **gender pay equality** across job roles and factories using **Equality Scores**.
+
+### 🏢 Context
+Internal concerns about salary-based gender discrimination led to a forensic audit. The forensic analysts calculated an **Equality Score** (ranging from -100 to +100) for each job role at each factory:
+
+- `0` indicates perfect equality.  
+- Negative or positive values imply bias.
+
+### 🛠️ Tools Used
 - Microsoft Excel
 
-### Dataset:
-- Columns:
-  - Factory
-  - Job Role
-  - Equality Score (integer)
+### 🧠 Dataset Overview
 
-### Task:
-Create a fourth column named `Equality Class` and classify equality scores as:
-- **Fair**: if score is between -10 and +10 (inclusive)
-- **Unfair**: if score is between -20 and -11 OR 11 and 20
-- **Highly Discriminative**: if score < -20 or > 20
+**Columns:**
+- `Factory`
+- `Job Role`
+- `Equality Score`
 
-### Implementation:
-Used a nested IF formula in Excel:
+### 📋 Task
 
-       =IF(ABS([@Equality_Score]) <= 10, "Fair",
-           IF(ABS([@Equality_Score]) <= 20, "Unfair", "Highly Discriminative"))
+Add a 4th column named `Equality Class`, classifying the score as:
 
-### Outcome:
-- Each row in the dataset was classified correctly.
-- The completed Excel sheet was submitted successfully.
+| Score Range             | Equality Class           |
+|-------------------------|--------------------------|
+| -10 to 10 (inclusive)   | Fair                     |
+| -20 to -11 or 11 to 20  | Unfair                   |
+| < -20 or > 20           | Highly Discriminative    |
 
----
+### 💡 Implementation
 
-## Skills Gained:
-- Tableau dashboarding and visualization
-- Data modeling using calculated fields
-- Filtering and interactivity in business dashboards
-- Excel logic and classification using nested formulas
-- Real-world data interpretation in business and forensic contexts
-- Analytical storytelling with data
+Used a nested `IF` formula in Excel:
+
+```excel
+=IF(ABS([@Equality_Score]) <= 10, "Fair",
+    IF(ABS([@Equality_Score]) <= 20, "Unfair", "Highly Discriminative"))
+```
+### ✅ Outcome
+
+- Accurately classified all roles based on **Equality Score**.  
+- Submitted the completed Excel file as the final output.
 
 ---
 
-## Author:
-Raja Mehdi Ali Khan  
-NIT Andhra Pradesh  
-Deloitte Data Analytics Virtual Internship (2025)
+### 🧠 Skills Gained
+
+- 📈 Data Visualization using Tableau  
+- ⚙️ Data modeling with calculated fields  
+- 🧩 Interactive dashboards with filters  
+- 📊 Data classification using Excel formulas  
+- 🕵️ Real-world business and forensic analytics  
+- 📚 Analytical storytelling and insight reporting  
+
+---
+
+### 👤 Author
+
+**Raja Mehdi Ali Khan**  
+*National Institute of Technology, Andhra Pradesh*  
+Completed as part of the **Deloitte Data Analytics Virtual Internship (2025)**
