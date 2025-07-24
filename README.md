@@ -14,7 +14,7 @@ To determine:
 - Which Daikibo factory experienced the highest machine downtime.
 - Which machine types contributed most to the downtime in that factory.
 
-### Context:
+### Context: 
 Daikibo operates four factories in:
 - Meiyo (Tokyo, Japan)
 - Seiko (Osaka, Japan)
